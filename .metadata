@@ -5,6 +5,6 @@
 
 version:
   revision: 8af6b2f038c1172e61d418869363a28dffec3cb4
-  channel: stable
+  channel: alpha
 
 project_type: app

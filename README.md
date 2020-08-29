@@ -27,11 +27,11 @@ jappe-os, in the future when it comes!
 
 ## Developers
 ### - Jappe02
- 
+### 
 
 ## Alpha testers
 ### - GITHUB_USERNAME
- 
+### 
 
 # Kernel
 

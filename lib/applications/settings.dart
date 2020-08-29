@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simpaDesktop/components/system.dart';
 
 void main() {
   runApp(MyApp());
@@ -35,14 +36,8 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            //here is the widgets
-            
-          ],
-        ),
+      body: Container(
+        
       ),
     );
   }

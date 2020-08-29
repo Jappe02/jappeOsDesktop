@@ -1,16 +1,39 @@
-# simpaDesktop
+# JappeOsDesktop
 
-A new Flutter project.
+Jappe os desktop is the desktop environment for Jappe os.
+This desktop environment is coded with flutter,
+and includes the whole desktop environment code in this github page.
+Currently Jappe studios is developing on it, so this readme doesn't include much.
 
-## Getting Started
+# In development
 
-This project is a starting point for a Flutter application.
+Jappe os desktop is now in development by jappe studios, so, only alpha testers
+have access to the desktop environment.
 
-A few resources to get you started if this is your first Flutter project:
+## Devlog
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+The jappe os discord has a devlog channel where you can see new things added to
+Jappe os.
+Discord link: https://discord.gg/dRtU4HR
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# What is jappe os?
+
+Jappe-os is an operating system made by Jappe-Studios. You can download the .iso
+file for free and use jappe-os on your computer if you want. Installation tutorials
+are in the discord server! You can also use jappe-os mobile, the mobile version of
+jappe-os, in the future when it comes!
+
+# Kernel
+
+Jappe-os uses the linux kernel, if you are not pleased to use it, you can always
+suggest in the discord
+
+# LINKS
+
+- [Discord](https://discord.gg/dRtU4HR)
+- [Website](https://jappeos.blogspot.com/)
+- [Github](https://github.com/Jappe02/jappeOsDesktop/)
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+- [JAPPE STUDIOS](https://jappe-studios.blogspot.com/)

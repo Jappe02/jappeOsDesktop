@@ -23,6 +23,14 @@ file for free and use jappe-os on your computer if you want. Installation tutori
 are in the discord server! You can also use jappe-os mobile, the mobile version of
 jappe-os, in the future when it comes!
 
+# People
+
+## Developers
+### - Jappe02
+
+## Alpha testers
+### - GITHUB_USERNAME
+
 # Kernel
 
 Jappe-os uses the linux kernel, if you are not pleased to use it, you can always

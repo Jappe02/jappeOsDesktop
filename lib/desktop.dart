@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'dart:async';
+import 'dart:io';
 
 void main() {
   runApp(SimpaDesktop());
@@ -80,7 +81,17 @@ class _MyDesktopPageState extends State<desktop> {
                             ],
                           ),
                           Row(
-
+                            children: <Widget>[
+                              RaisedButton( // button to restart the os on linux
+                                onPressed: () {
+                                  //Process.run('reboot', [' ']);
+                                },
+                                child: Text('Reboot linux',
+                                style: TextStyle(fontSize: 20,)),
+                                color: Colors.red,
+                                textColor: Colors.white,
+                              ),
+                            ],
                           ),
                           Row(
 

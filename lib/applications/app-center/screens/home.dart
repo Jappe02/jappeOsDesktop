@@ -11,6 +11,7 @@ class AppCenterHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'app center',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.green,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -35,24 +36,39 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Container( // custom appbar
-          height: 50,
-          color: Colors.green,
-          child: Positioned(
-            child: Row(
-              children: <Widget>[
-                Container(
-                  width: 50,
-                  child: FlatButton(
-                    padding: EdgeInsets.all(0),
-                    onPressed: () {
+        child: Positioned(
+          left: 0,
+          top: 0,
+          right: 0,
+          child: Container( // custom appbar
+            
+            color: Colors.green,
+            child: Align(
+              alignment: Alignment.topRight,
+              child: Row(
+                children: <Widget>[
+                  Container(
+                    width: 50,
+                    child: FlatButton(
+                      padding: EdgeInsets.all(0),
+                      onPressed: () {
 
-                    },
-                    child: Icon(Icons.menu, color: Colors.white,),
+                      },
+                      child: Icon(Icons.menu, color: Colors.white,),
+                    ),
                   ),
-                ),
-                
-              ],
+                  Container(width: 10,),
+                  Container(
+                    child: Text(
+                      'App center',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),

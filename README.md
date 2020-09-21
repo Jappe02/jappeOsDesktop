@@ -27,11 +27,12 @@ jappe-os, in the future when it comes!
 
 ## Developers
 ### - Jappe02
-### 
+### - MannersTheCyberpunker8000 (discord)
 
 ## Alpha testers
-### - GITHUB_USERNAME
-### 
+### - Jappe02
+### - xBaddix (discord)
+### - MannersTheCyberpunker8000 (discord)
 
 # Kernel
 

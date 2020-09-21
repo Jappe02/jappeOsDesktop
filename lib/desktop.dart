@@ -37,10 +37,6 @@ class desktop extends StatefulWidget {
 
 
 class _MyDesktopPageState extends State<desktop> {
-
-  double top = 0;
-  double left = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +47,7 @@ class _MyDesktopPageState extends State<desktop> {
             fit: BoxFit.cover,
           ),
         ),
-
+        
         child: Stack(
           children: <Widget>[
             Positioned(
@@ -135,14 +131,12 @@ class _MyDesktopPageState extends State<desktop> {
                         ],
                       ),
                     ),
-                    Container( // Window moving area & overlays
+                    Container( // Window moving area & other things on top of windows
                       child: Stack(
                         children: <Widget>[
                           Stack( // Window moving area
                             children: <Widget>[
-                              Container(
-                                
-                              ),
+                              
                             ],
                           ),
                           
@@ -316,7 +310,7 @@ class _MyDesktopPageState extends State<desktop> {
 Widget topBarContainer (Widget child) {
   return ClipRRect (
     child: BackdropFilter(
-      filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+      filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
       child: Container(
         height: MediaQuery
           .of(context)
@@ -337,7 +331,7 @@ Widget dockContainer (Widget child) {
   return ClipRRect (
     borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10),),
     child: BackdropFilter(
-      filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+      filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
       child: Container(
         height: MediaQuery
           .of(context)
@@ -347,7 +341,7 @@ Widget dockContainer (Widget child) {
           .of(context)
           .size
           .width / 1.2,
-        color:Colors.black.withOpacity(0.5),
+        color:Colors.black.withOpacity(0.6),
         child: child,
       ),
     ),

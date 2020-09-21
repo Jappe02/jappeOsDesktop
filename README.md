@@ -2,7 +2,7 @@
 
 Jappe os desktop is the desktop environment for Jappe os.
 This desktop environment is coded with flutter,
-and includes the whole desktop environment code in this github page.
+and includes the whole desktop environment code in this github repository.
 Currently Jappe studios is developing on it, so this readme doesn't include much.
 
 # In development

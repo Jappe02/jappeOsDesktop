@@ -419,7 +419,36 @@ class _MyLauncherPageState extends State<Launcher> {
               child: Container(
                 child: contentContainer(
                   Stack(
-
+                    children: <Widget>[
+                      Positioned( /// [NOT DONE]
+                        top: 50,
+                        left: 100,
+                        right: 100,
+                        height: 50,
+                        child: Align(
+                          alignment: Alignment.topCenter,
+                          
+                          child: FlatButton(
+                            padding: EdgeInsets.all(0),
+                            child: Row(
+                              children: [
+                                Icon(Icons.apps, color: Colors.white,),
+                                Text(
+                                  'App launcher',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            onPressed: () {
+                                
+                            },
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -462,7 +491,7 @@ class _MyLauncherPageState extends State<Launcher> {
             .of(context)
             .size
             .width / 1.2,
-          color:Colors.black.withOpacity(0),
+          color:Colors.black.withOpacity(0.2),
           child: child,
         ),
       ),

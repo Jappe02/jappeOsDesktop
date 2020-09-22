@@ -13,7 +13,7 @@ class SimpaDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Desktop',
-      home: desktop(title: ''),
+      home: Desktop(title: ''),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
 
@@ -25,8 +25,8 @@ class SimpaDesktop extends StatelessWidget {
   }
 }
 
-class desktop extends StatefulWidget {
-  desktop({Key key, this.title}) : super(key: key);
+class Desktop extends StatefulWidget {
+  Desktop({Key key, this.title}) : super(key: key);
 
   final String title;
 
@@ -36,7 +36,7 @@ class desktop extends StatefulWidget {
 
 
 
-class _MyDesktopPageState extends State<desktop> {
+class _MyDesktopPageState extends State<Desktop> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -182,7 +182,8 @@ class _MyDesktopPageState extends State<desktop> {
                                               padding: EdgeInsets.all(0),
                                               child: Icon(Icons.apps, color: Colors.white.withOpacity(0.8)),
                                               onPressed: () {
-
+                                                Navigator.push(context,
+                                                MaterialPageRoute(builder: (context)=>Launcher()));
                                               },
                                             ),
                                           ),
@@ -307,45 +308,164 @@ class _MyDesktopPageState extends State<desktop> {
     );
   }
 
-Widget topBarContainer (Widget child) {
-  return ClipRRect (
-    child: BackdropFilter(
-      filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
-      child: Container(
-        height: MediaQuery
-          .of(context)
-          .size
-          .height / 4,
-        width: MediaQuery
-          .of(context)
-          .size
-          .width / 1.2,
-        color:Colors.black.withOpacity(0.5),
-        child: child,
+  // Blur effects
+  Widget topBarContainer (Widget child) {
+    return ClipRRect (
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
+        child: Container(
+          height: MediaQuery
+            .of(context)
+            .size
+            .height / 4,
+          width: MediaQuery
+            .of(context)
+            .size
+            .width / 1.2,
+          color:Colors.black.withOpacity(0.5),
+          child: child,
+        ),
       ),
-    ),
-  );
+    );
+  }
+
+  Widget dockContainer (Widget child) {
+    return ClipRRect (
+      borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10),),
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
+        child: Container(
+          height: MediaQuery
+            .of(context)
+            .size
+            .height / 4,
+          width: MediaQuery
+            .of(context)
+            .size
+            .width / 1.2,
+          color:Colors.black.withOpacity(0.6),
+          child: child,
+        ),
+      ),
+    );
+  }
+
 }
 
-Widget dockContainer (Widget child) {
-  return ClipRRect (
-    borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10),),
-    child: BackdropFilter(
-      filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
-      child: Container(
-        height: MediaQuery
-          .of(context)
-          .size
-          .height / 4,
-        width: MediaQuery
-          .of(context)
-          .size
-          .width / 1.2,
-        color:Colors.black.withOpacity(0.6),
-        child: child,
-      ),
-    ),
-  );
+
+class Launcher extends StatefulWidget {
+  Launcher({Key key, this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  _MyLauncherPageState createState() => _MyLauncherPageState();
 }
 
+
+
+class _MyLauncherPageState extends State<Launcher> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("lib/images/desktop/backgrounds/wallpaper2.jpg"), // desktop background image
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Stack(
+          children: <Widget>[
+            // Topbar
+            Positioned(
+              top: -10,
+              left: 0,
+              right: 0,
+              height: 40,
+              child: Container(
+                child: topBarContainer(           
+                  Stack(
+                    children: <Widget>[
+                      // Topbar right side
+                      Positioned(
+                        right: 0,
+                        child: FlatButton(
+                          padding: EdgeInsets.all(0),
+                          child: Text(
+                            'Close',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white.withOpacity(0.8),
+                            ),
+                          ),
+                          onPressed: () {
+                            Navigator.push(context,
+                            MaterialPageRoute(builder: (context)=>Desktop()));
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            // Launcher content
+            Positioned(
+              top: 30,
+              left: 0,
+              bottom: 0,
+              right: 0,
+              child: Container(
+                child: contentContainer(
+                  Stack(
+
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+  // Blur effects
+  Widget topBarContainer (Widget child) {
+    return ClipRRect (
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
+        child: Container(
+          height: MediaQuery
+            .of(context)
+            .size
+            .height / 4,
+          width: MediaQuery
+            .of(context)
+            .size
+            .width / 1.2,
+          color:Colors.black.withOpacity(0.5),
+          child: child,
+        ),
+      ),
+    );
+  }
+  Widget contentContainer (Widget child) {
+    return ClipRRect (
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
+        child: Container(
+          height: MediaQuery
+            .of(context)
+            .size
+            .height / 4,
+          width: MediaQuery
+            .of(context)
+            .size
+            .width / 1.2,
+          color:Colors.black.withOpacity(0),
+          child: child,
+        ),
+      ),
+    );
+  }
 }

@@ -427,24 +427,33 @@ class _MyLauncherPageState extends State<Launcher> {
                           width: 240,
                           child: Row(
                             children: [
-                              FlatButton(
-                                padding: EdgeInsets.all(0),
-                                child: Row(
-                                  children: [
-                                    Icon(Icons.apps, color: Colors.white,),
-                                    Text(
-                                      'App launcher',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white,
-                                      ),
+                              Column(
+                                children: [
+                                  FlatButton(
+                                    padding: EdgeInsets.all(0),
+                                    child: Row(
+                                      children: [
+                                        Icon(Icons.apps, color: Colors.blue[300],),
+                                        Text(
+                                          'App launcher',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.blue[300],
+                                          ),
+                                        ),
+                                      ],
                                     ),
-                                  ],
-                                ),
-                                onPressed: () {
+                                    onPressed: () {
                                 
-                                },
+                                    },
                           
+                                  ),
+                                  Container(
+                                    height: 3,
+                                    width: 120,
+                                    color: Colors.blue[300],
+                                  ),
+                                ],
                               ),
                               Container(width: 10, height: 10,),
                               FlatButton(
@@ -462,7 +471,8 @@ class _MyLauncherPageState extends State<Launcher> {
                                   ],
                                 ),
                                 onPressed: () {
-                                
+                                  Navigator.push(context,
+                                  MaterialPageRoute(builder: (context)=>Notifications()));
                                 },
                           
                               ),
@@ -787,29 +797,39 @@ class _MyNotificationsPageState extends State<Notifications> {
                                   ],
                                 ),
                                 onPressed: () {
-                                
+                                  Navigator.push(context,
+                                  MaterialPageRoute(builder: (context)=>Launcher()));
                                 },
                           
                               ),
                               Container(width: 10, height: 10,),
-                              FlatButton(
-                                padding: EdgeInsets.all(0),
-                                child: Row(
-                                  children: [
-                                    Icon(Icons.notifications_active, color: Colors.white,),
-                                    Text(
-                                      'Notifications',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white,
-                                      ),
+                              Column(
+                                children: [
+                                  FlatButton(
+                                    padding: EdgeInsets.all(0),
+                                    child: Row(
+                                      children: [
+                                        Icon(Icons.notifications_active, color: Colors.blue[300],),
+                                        Text(
+                                          'Notifications',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.blue[300],
+                                          ),
+                                        ),
+                                      ],
                                     ),
-                                  ],
-                                ),
-                                onPressed: () {
+                                    onPressed: () {
                                 
-                                },
+                                    },
                           
+                                  ),
+                                  Container(
+                                    height: 3,
+                                    width: 120,
+                                    color: Colors.blue[300],
+                                  ),
+                                ],
                               ),
                             ],
                           ),

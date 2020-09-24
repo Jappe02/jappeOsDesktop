@@ -418,34 +418,418 @@ class _MyLauncherPageState extends State<Launcher> {
               right: 0,
               child: Container(
                 child: contentContainer(
+                  Column(
+                    children: <Widget>[
+                      Align(
+                        alignment: Alignment.topCenter,
+                          
+                        child: Container(
+                          width: 240,
+                          child: Row(
+                            children: [
+                              FlatButton(
+                                padding: EdgeInsets.all(0),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.apps, color: Colors.white,),
+                                    Text(
+                                      'App launcher',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                onPressed: () {
+                                
+                                },
+                          
+                              ),
+                              Container(width: 10, height: 10,),
+                              FlatButton(
+                                padding: EdgeInsets.all(0),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.notifications_active, color: Colors.white,),
+                                    Text(
+                                      'Notifications',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                onPressed: () {
+                                
+                                },
+                          
+                              ),
+                            ],
+                          ),
+                          
+                        ),
+                      ),
+
+                      Align(
+                        alignment: Alignment.topCenter,
+                          
+                        child: Container(
+                          width: 475,
+                          child: Wrap(
+                            direction: Axis.horizontal,
+                            spacing: 15,
+                            children: [
+                              Container(
+                                width: 55,
+                                height: 70,
+                                padding: EdgeInsets.only(top: 15,),
+                                child: RaisedButton(
+                                  onPressed: () {
+
+                                  },
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                  padding: EdgeInsets.all(0),
+                                  child: Icon(Icons.power_settings_new, color: Colors.white, size: 50,),
+                                  color: Colors.blue.withOpacity(0.6),
+                                ),
+                              ),
+                              Container(
+                                width: 55,
+                                height: 70,
+                                padding: EdgeInsets.only(top: 15,),
+                                child: RaisedButton(
+                                  onPressed: () {
+
+                                  },
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                  padding: EdgeInsets.all(0),
+                                  child: Icon(Icons.settings, color: Colors.white, size: 50,),
+                                  color: Colors.blue.withOpacity(0.6),
+                                ),
+                              ),
+                              Container(
+                                width: 55,
+                                height: 70,
+                                padding: EdgeInsets.only(top: 15,),
+                                child: RaisedButton(
+                                  onPressed: () {
+
+                                  },
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                  padding: EdgeInsets.all(0),
+                                  child: Icon(Icons.wifi, color: Colors.white, size: 50,),
+                                  color: Colors.blue.withOpacity(0.6),
+                                ),
+                              ),
+                              Container(
+                                width: 55,
+                                height: 70,
+                                padding: EdgeInsets.only(top: 15,),
+                                child: RaisedButton(
+                                  onPressed: () {
+
+                                  },
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                  padding: EdgeInsets.all(0),
+                                  child: Icon(Icons.volume_off, color: Colors.white, size: 50,),
+                                  color: Colors.blue.withOpacity(0.6),
+                                ),
+                              ),
+                              Container(
+                                width: 55,
+                                height: 70,
+                                padding: EdgeInsets.only(top: 15,),
+                                child: RaisedButton(
+                                  onPressed: () {
+
+                                  },
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                  padding: EdgeInsets.all(0),
+                                  child: Icon(Icons.bluetooth_disabled, color: Colors.white, size: 50,),
+                                  color: Colors.blue.withOpacity(0.6),
+                                ),
+                              ),
+                              Container(
+                                width: 55,
+                                height: 70,
+                                padding: EdgeInsets.only(top: 15,),
+                                child: RaisedButton(
+                                  onPressed: () {
+
+                                  },
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                  padding: EdgeInsets.all(0),
+                                  child: Icon(Icons.airplanemode_inactive, color: Colors.white, size: 50,),
+                                  color: Colors.blue.withOpacity(0.6),
+                                ),
+                              ),
+                              Container(
+                                width: 55,
+                                height: 70,
+                                padding: EdgeInsets.only(top: 15,),
+                                child: RaisedButton(
+                                  onPressed: () {
+
+                                  },
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                  padding: EdgeInsets.all(0),
+                                  child: Icon(Icons.battery_unknown, color: Colors.white, size: 50,),
+                                  color: Colors.blue.withOpacity(0.6),
+                                ),
+                              ),
+                              Container(
+                                width: 55,
+                                height: 70,
+                                padding: EdgeInsets.only(top: 15,),
+                                child: RaisedButton(
+                                  onPressed: () {
+
+                                  },
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                  padding: EdgeInsets.all(0),
+                                  child: Icon(Icons.location_off, color: Colors.white, size: 50,),
+                                  color: Colors.blue.withOpacity(0.6),
+                                ),
+                              ),
+                              Container(
+                                width: 55,
+                                height: 70,
+                                padding: EdgeInsets.only(top: 15,),
+                                child: RaisedButton(
+                                  onPressed: () {
+
+                                  },
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                  padding: EdgeInsets.all(0),
+                                  child: Icon(Icons.do_not_disturb_off, color: Colors.white, size: 50,),
+                                  color: Colors.blue.withOpacity(0.6),
+                                ),
+                              ),
+                              Container(
+                                width: 55,
+                                height: 70,
+                                padding: EdgeInsets.only(top: 15,),
+                                child: RaisedButton(
+                                  onPressed: () {
+
+                                  },
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                  padding: EdgeInsets.all(0),
+                                  child: Icon(Icons.brightness_7, color: Colors.white, size: 50,),
+                                  color: Colors.blue.withOpacity(0.6),
+                                ),
+                              ),
+                            ],
+                          ),
+                          
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+  // Blur effects
+  Widget topBarContainer (Widget child) {
+    return ClipRRect (
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
+        child: Container(
+          height: MediaQuery
+            .of(context)
+            .size
+            .height / 4,
+          width: MediaQuery
+            .of(context)
+            .size
+            .width / 1.2,
+          color:Colors.black.withOpacity(0.5),
+          child: child,
+        ),
+      ),
+    );
+  }
+  Widget contentContainer (Widget child) {
+    return ClipRRect (
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
+        child: Container(
+          height: MediaQuery
+            .of(context)
+            .size
+            .height / 4,
+          width: MediaQuery
+            .of(context)
+            .size
+            .width / 1.2,
+          color:Colors.black.withOpacity(0.2),
+          child: child,
+        ),
+      ),
+    );
+  }
+}
+
+
+class Notifications extends StatefulWidget {
+  Notifications({Key key, this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  _MyNotificationsPageState createState() => _MyNotificationsPageState();
+}
+
+
+
+class _MyNotificationsPageState extends State<Notifications> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("lib/images/desktop/backgrounds/wallpaper2.jpg"), // desktop background image
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Stack(
+          children: <Widget>[
+            // Topbar
+            Positioned(
+              top: -10,
+              left: 0,
+              right: 0,
+              height: 40,
+              child: Container(
+                child: topBarContainer(           
                   Stack(
                     children: <Widget>[
-                      Positioned( /// [NOT DONE]
-                        top: 50,
-                        left: 100,
-                        right: 100,
-                        height: 50,
-                        child: Align(
-                          alignment: Alignment.topCenter,
-                          
-                          child: FlatButton(
-                            padding: EdgeInsets.all(0),
-                            child: Row(
-                              children: [
-                                Icon(Icons.apps, color: Colors.white,),
-                                Text(
-                                  'App launcher',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
+                      // Topbar right side
+                      Positioned(
+                        right: 0,
+                        child: FlatButton(
+                          padding: EdgeInsets.all(0),
+                          child: Text(
+                            'Close',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white.withOpacity(0.8),
                             ),
-                            onPressed: () {
-                                
-                            },
                           ),
+                          onPressed: () {
+                            Navigator.push(context,
+                            MaterialPageRoute(builder: (context)=>Desktop()));
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            // Notifications content
+            Positioned(
+              top: 30,
+              left: 0,
+              bottom: 0,
+              right: 0,
+              child: Container(
+                child: contentContainer(
+                  Column(
+                    children: <Widget>[
+                      Align(
+                        alignment: Alignment.topCenter,
+                          
+                        child: Container(
+                          width: 240,
+                          child: Row(
+                            children: [
+                              FlatButton(
+                                padding: EdgeInsets.all(0),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.apps, color: Colors.white,),
+                                    Text(
+                                      'App launcher',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                onPressed: () {
+                                
+                                },
+                          
+                              ),
+                              Container(width: 10, height: 10,),
+                              FlatButton(
+                                padding: EdgeInsets.all(0),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.notifications_active, color: Colors.white,),
+                                    Text(
+                                      'Notifications',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                onPressed: () {
+                                
+                                },
+                          
+                              ),
+                            ],
+                          ),
+                          
+                        ),
+                      ),
+
+                      Align(
+                        alignment: Alignment.topCenter,
+                          
+                        child: Container(
+                          width: 400,
+                          child: Wrap(
+                            direction: Axis.horizontal,
+                            spacing: 15,
+                            children: [
+                              
+                            ],
+                          ),
+                          
                         ),
                       ),
                     ],

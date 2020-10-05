@@ -842,10 +842,8 @@ class _MyNotificationsPageState extends State<Notifications> {
                           
                         child: Container(
                           width: 400,
-                          child: Wrap(
-                            direction: Axis.horizontal,
-                            spacing: 15,
-                            children: [
+                          child: Column(
+                            children: [ // Notifications
                               
                             ],
                           ),

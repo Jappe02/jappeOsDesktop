@@ -31,7 +31,7 @@ jappe-os, in the future when it comes!
 
 ## Alpha testers
 ### - Jappe02
-### - xBaddix (discord)
+### - HotBoySummer (discord)
 ### - MannersTheCyberpunker8000 (discord)
 
 # Kernel

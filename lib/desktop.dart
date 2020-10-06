@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:io';
+import 'package:simpaDesktop/components/system.dart';
 
 void main() {
   runApp(SimpaDesktop());
@@ -43,7 +44,7 @@ class _MyDesktopPageState extends State<Desktop> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("lib/images/desktop/backgrounds/wallpaper2.jpg"), // desktop background image
+            image: AssetImage(dsktpWallpaper), // desktop background image
             fit: BoxFit.cover,
           ),
         ),
@@ -322,7 +323,7 @@ class _MyDesktopPageState extends State<Desktop> {
             .of(context)
             .size
             .width / 1.2,
-          color:Colors.black.withOpacity(0.5),
+          color: sstmSystemDsktpBlurColor.withOpacity(0.5),
           child: child,
         ),
       ),
@@ -371,7 +372,7 @@ class _MyLauncherPageState extends State<Launcher> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("lib/images/desktop/backgrounds/wallpaper2.jpg"), // desktop background image
+            image: AssetImage(dsktpWallpaper), // desktop background image
             fit: BoxFit.cover,
           ),
         ),
@@ -387,6 +388,18 @@ class _MyLauncherPageState extends State<Launcher> {
                 child: topBarContainer(           
                   Stack(
                     children: <Widget>[
+                      // Topbar left side
+                      Positioned(
+                        top: 15,
+                        left: 15,
+                        child: Text(
+                          'Launcher',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+
                       // Topbar right side
                       Positioned(
                         right: 0,
@@ -485,7 +498,7 @@ class _MyLauncherPageState extends State<Launcher> {
                       Align(
                         alignment: Alignment.topCenter,
                           
-                        child: Container(
+                        child: Container( // action buttons
                           width: 475,
                           child: Wrap(
                             direction: Axis.horizontal,
@@ -505,6 +518,22 @@ class _MyLauncherPageState extends State<Launcher> {
                                   padding: EdgeInsets.all(0),
                                   child: Icon(Icons.power_settings_new, color: Colors.white, size: 50,),
                                   color: Colors.blue.withOpacity(0.6),
+                                ),
+                              ),
+                              Container(
+                                width: 55,
+                                height: 70,
+                                padding: EdgeInsets.only(top: 15,),
+                                child: RaisedButton(
+                                  onPressed: () {
+
+                                  },
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                  padding: EdgeInsets.all(0),
+                                  child: Icon(Icons.update, color: Colors.white, size: 50,),
+                                  color: Colors.amber[800].withOpacity(0.6),
                                 ),
                               ),
                               Container(
@@ -680,7 +709,7 @@ class _MyLauncherPageState extends State<Launcher> {
             .of(context)
             .size
             .width / 1.2,
-          color:Colors.black.withOpacity(0.5),
+          color: sstmSystemDsktpBlurColor.withOpacity(0.5),
           child: child,
         ),
       ),
@@ -726,7 +755,7 @@ class _MyNotificationsPageState extends State<Notifications> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("lib/images/desktop/backgrounds/wallpaper2.jpg"), // desktop background image
+            image: AssetImage(dsktpWallpaper), // desktop background image
             fit: BoxFit.cover,
           ),
         ),
@@ -874,7 +903,7 @@ class _MyNotificationsPageState extends State<Notifications> {
             .of(context)
             .size
             .width / 1.2,
-          color:Colors.black.withOpacity(0.5),
+          color: sstmSystemDsktpBlurColor.withOpacity(0.5),
           child: child,
         ),
       ),

@@ -13,9 +13,9 @@ class SimpaDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Desktop',
-      home: Desktop(title: ''),
-      debugShowCheckedModeBanner: false,
+    title: 'Desktop',
+    home: Desktop(title: ''),
+    debugShowCheckedModeBanner: false,
       theme: ThemeData(
 
         primarySwatch: Colors.teal,

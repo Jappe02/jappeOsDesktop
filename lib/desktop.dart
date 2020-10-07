@@ -164,10 +164,10 @@ class _MyDesktopPageState extends State<Desktop> {
                             ),
                           ),
                           Positioned( // Top bar
-                            top: -10,
+                            top: -5,
                             left: 0,
                             right: 0,
-                            height: 40,
+                            height: 35,
                             
                             child: Container(
                               child: topBarContainer(
@@ -380,17 +380,17 @@ class _MyLauncherPageState extends State<Launcher> {
           children: <Widget>[
             // Topbar
             Positioned(
-              top: -10,
+              top: -5,
               left: 0,
               right: 0,
-              height: 40,
+              height: 35,
               child: Container(
                 child: topBarContainer(           
                   Stack(
                     children: <Widget>[
                       // Topbar left side
                       Positioned(
-                        top: 15,
+                        top: 10,
                         left: 15,
                         child: Text(
                           'Launcher',
@@ -763,10 +763,10 @@ class _MyNotificationsPageState extends State<Notifications> {
           children: <Widget>[
             // Topbar
             Positioned(
-              top: -10,
+              top: -5,
               left: 0,
               right: 0,
-              height: 40,
+              height: 35,
               child: Container(
                 child: topBarContainer(           
                   Stack(

@@ -284,7 +284,29 @@ class _MyDesktopPageState extends State<Desktop> {
                                                 ),
                                               ),
                                               onPressed: () {
-
+                                                showDialog(
+                                                  barrierColor: Colors.transparent,
+                                                  context: context,
+                                                  builder: (context) {
+                                                    return Stack(
+          
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(0),
+              child: new Container(
+                alignment: Alignment.topRight,
+                height: 100,
+                width: 100,
+                color: Colors.white,
+                child: Container(
+                  
+                ),
+              ),
+            )
+          ],
+        );
+                                                  }
+                                                );
                                               },
                                             ),
                                           ),

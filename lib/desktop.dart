@@ -289,22 +289,39 @@ class _MyDesktopPageState extends State<Desktop> {
                                                   context: context,
                                                   builder: (context) {
                                                     return Stack(
-          
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(0),
-              child: new Container(
-                alignment: Alignment.topRight,
-                height: 100,
-                width: 100,
-                color: Colors.white,
-                child: Container(
-                  
-                ),
-              ),
-            )
-          ],
-        );
+                                                      alignment: Alignment.topRight,
+                                                      children: <Widget>[
+                                                        Padding(
+                                                          padding: const EdgeInsets.all(0),
+                                                          child: Container(
+                                                            alignment: Alignment.topRight,
+                                                            height: 500,
+                                                            width: 300,
+                                                            color: Colors.white,
+                                                            child: Container(
+                                                              child: Column(
+                                                                children: [
+                                                                  Container( // Header
+                                                                    height: 40,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(top: 10,),
+                                                                    child: Text(
+                                                                      'Date & time',
+                                                                      textAlign: TextAlign.left,
+                                                                      style: TextStyle(
+                                                                        color: Colors.black,
+                                                                        fontSize: 25,
+                                                                        
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        )
+                                                      ],
+                                                    );
                                                   }
                                                 );
                                               },

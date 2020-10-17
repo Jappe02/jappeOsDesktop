@@ -301,7 +301,7 @@ class _MyDesktopPageState extends State<Desktop> {
                                                             child: Container(
                                                               child: Column(
                                                                 children: [
-                                                                  Container( // Header
+                                                                  Container( // Header I
                                                                     height: 40,
                                                                     width: 270,
                                                                     padding: EdgeInsets.only(top: 10,),
@@ -311,6 +311,20 @@ class _MyDesktopPageState extends State<Desktop> {
                                                                       style: TextStyle(
                                                                         color: Colors.black,
                                                                         fontSize: 25,
+                                                                        decoration: TextDecoration.none,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Container( // Header II
+                                                                    height: 23,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(top: 10,),
+                                                                    child: Text(
+                                                                      '--/--/---- • --.--',
+                                                                      textAlign: TextAlign.left,
+                                                                      style: TextStyle(
+                                                                        color: Colors.black.withOpacity(0.7),
+                                                                        fontSize: 14,
                                                                         decoration: TextDecoration.none,
                                                                       ),
                                                                     ),

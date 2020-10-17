@@ -311,7 +311,7 @@ class _MyDesktopPageState extends State<Desktop> {
                                                                       style: TextStyle(
                                                                         color: Colors.black,
                                                                         fontSize: 25,
-                                                                        
+                                                                        decoration: TextDecoration.none,
                                                                       ),
                                                                     ),
                                                                   ),

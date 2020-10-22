@@ -292,12 +292,18 @@ class _MyDesktopPageState extends State<Desktop> {
                                                       alignment: Alignment.topRight,
                                                       children: <Widget>[
                                                         Padding(
-                                                          padding: const EdgeInsets.all(0),
+                                                          padding: const EdgeInsets.only(left: 0, top: 30, bottom: 0, right: 0,),
                                                           child: Container(
+                                                            decoration: BoxDecoration(
+                                                              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10),),
+                                                              color: Colors.black45.withOpacity(0.7),
+                                                              boxShadow: [
+                                                                BoxShadow(offset: Offset(0, 1), color: Colors.white30, spreadRadius: 1,)
+                                                              ]
+                                                            ),
                                                             alignment: Alignment.topRight,
                                                             height: 500,
                                                             width: 300,
-                                                            color: Colors.white,
                                                             child: Container(
                                                               child: Column(
                                                                 children: [
@@ -309,7 +315,7 @@ class _MyDesktopPageState extends State<Desktop> {
                                                                       'Date & time',
                                                                       textAlign: TextAlign.left,
                                                                       style: TextStyle(
-                                                                        color: Colors.black,
+                                                                        color: Colors.white,
                                                                         fontSize: 25,
                                                                         decoration: TextDecoration.none,
                                                                       ),
@@ -323,10 +329,43 @@ class _MyDesktopPageState extends State<Desktop> {
                                                                       '--/--/---- • --.--',
                                                                       textAlign: TextAlign.left,
                                                                       style: TextStyle(
-                                                                        color: Colors.black.withOpacity(0.7),
+                                                                        color: Colors.white.withOpacity(0.7),
                                                                         fontSize: 14,
                                                                         decoration: TextDecoration.none,
                                                                       ),
+                                                                    ),
+                                                                  ),
+                                                                  Container( // Body
+                                                                    height: 360,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(top: 10, right: 35,),
+                                                                    color: Colors.green,
+                                                                    child: Text(
+                                                                      'Content coming soon!',
+                                                                      textAlign: TextAlign.right,
+                                                                      style: TextStyle(
+                                                                        color: Colors.white,
+                                                                        fontSize: 14,
+                                                                        decoration: TextDecoration.none,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Container( // Actions
+                                                                    height: 50,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(right: 35,),
+                                                                    
+                                                                    child: Row(
+                                                                      children: [
+                                                                        RaisedButton(
+                                                                          child: Text(
+                                                                            'Action1'
+                                                                          ),
+                                                                          onPressed: () {
+                                                                            
+                                                                          }
+                                                                        ),
+                                                                      ],
                                                                     ),
                                                                   ),
                                                                 ],

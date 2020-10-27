@@ -202,7 +202,108 @@ class _MyDesktopPageState extends State<Desktop> {
                                               padding: EdgeInsets.all(0),
                                               child: Icon(Icons.arrow_drop_down_circle, color: Colors.white.withOpacity(0.8)),
                                               onPressed: () {
-
+                                                showDialog(
+                                                  barrierColor: Colors.transparent,
+                                                  context: context,
+                                                  builder: (context) {
+                                                    return Stack(
+                                                      alignment: Alignment.topLeft,
+                                                      children: <Widget>[
+                                                        Padding(
+                                                          padding: const EdgeInsets.only(left: 0, top: 30, bottom: 0, right: 0,),
+                                                          child: Container(
+                                                            decoration: BoxDecoration(
+                                                              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10),),
+                                                              color: Colors.black45.withOpacity(0.7),
+                                                              boxShadow: [
+                                                                BoxShadow(offset: Offset(0, 1), color: Colors.white30, spreadRadius: 1,)
+                                                              ]
+                                                            ),
+                                                            alignment: Alignment.topRight,
+                                                            height: 500,
+                                                            width: 300,
+                                                            child: Container(
+                                                              child: Column(
+                                                                children: [
+                                                                  Container( // Header I
+                                                                    height: 40,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(top: 10,),
+                                                                    child: Text(
+                                                                      'Select your desktop',
+                                                                      textAlign: TextAlign.left,
+                                                                      style: TextStyle(
+                                                                        color: Colors.white,
+                                                                        fontSize: 25,
+                                                                        decoration: TextDecoration.none,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Container( // Header II
+                                                                    height: 23,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(top: 10,),
+                                                                    child: Text(
+                                                                      'Select one from the list below.',
+                                                                      textAlign: TextAlign.left,
+                                                                      style: TextStyle(
+                                                                        color: Colors.white.withOpacity(0.7),
+                                                                        fontSize: 14,
+                                                                        decoration: TextDecoration.none,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Container( // Body
+                                                                    height: 360,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(top: 10, right: 35,),
+                                                                    // color: Colors.green,
+                                                                    child: Text(
+                                                                      'Dialog content coming soon',
+                                                                      textAlign: TextAlign.right,
+                                                                      style: TextStyle(
+                                                                        color: Colors.white,
+                                                                        fontSize: 14,
+                                                                        decoration: TextDecoration.none,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Container( // Actions
+                                                                    height: 50,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(right: 35,),
+                                                                    
+                                                                    child: Row(
+                                                                      children: [
+                                                                        RaisedButton(
+                                                                          child: Text(
+                                                                            'Action1'
+                                                                          ),
+                                                                          onPressed: () {
+                                                                            
+                                                                          }
+                                                                        ),
+                                                                        Container(width: 10,),
+                                                                        RaisedButton(
+                                                                          child: Text(
+                                                                            'Action2'
+                                                                          ),
+                                                                          onPressed: () {
+                                                                            
+                                                                          }
+                                                                        ),
+                                                                      ],
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        )
+                                                      ],
+                                                    );
+                                                  }
+                                                );
                                               },
                                             ),
                                           ),
@@ -221,7 +322,108 @@ class _MyDesktopPageState extends State<Desktop> {
                                               padding: EdgeInsets.all(0),
                                               child: Icon(Icons.list, color: Colors.white.withOpacity(0.8)),
                                               onPressed: () {
-
+                                                showDialog(
+                                                  barrierColor: Colors.transparent,
+                                                  context: context,
+                                                  builder: (context) {
+                                                    return Stack(
+                                                      alignment: Alignment.topRight,
+                                                      children: <Widget>[
+                                                        Padding(
+                                                          padding: const EdgeInsets.only(left: 0, top: 30, bottom: 0, right: 0,),
+                                                          child: Container(
+                                                            decoration: BoxDecoration(
+                                                              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10),),
+                                                              color: Colors.black45.withOpacity(0.7),
+                                                              boxShadow: [
+                                                                BoxShadow(offset: Offset(0, 1), color: Colors.white30, spreadRadius: 1,)
+                                                              ]
+                                                            ),
+                                                            alignment: Alignment.topRight,
+                                                            height: 500,
+                                                            width: 300,
+                                                            child: Container(
+                                                              child: Column(
+                                                                children: [
+                                                                  Container( // Header I
+                                                                    height: 40,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(top: 10,),
+                                                                    child: Text(
+                                                                      'More items',
+                                                                      textAlign: TextAlign.left,
+                                                                      style: TextStyle(
+                                                                        color: Colors.white,
+                                                                        fontSize: 25,
+                                                                        decoration: TextDecoration.none,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Container( // Header II
+                                                                    height: 23,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(top: 10,),
+                                                                    child: Text(
+                                                                      'The rest of the items.',
+                                                                      textAlign: TextAlign.left,
+                                                                      style: TextStyle(
+                                                                        color: Colors.white.withOpacity(0.7),
+                                                                        fontSize: 14,
+                                                                        decoration: TextDecoration.none,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Container( // Body
+                                                                    height: 360,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(top: 10, right: 35,),
+                                                                    // color: Colors.green,
+                                                                    child: Text(
+                                                                      'Dialog content coming soon',
+                                                                      textAlign: TextAlign.right,
+                                                                      style: TextStyle(
+                                                                        color: Colors.white,
+                                                                        fontSize: 14,
+                                                                        decoration: TextDecoration.none,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Container( // Actions
+                                                                    height: 50,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(right: 35,),
+                                                                    
+                                                                    child: Row(
+                                                                      children: [
+                                                                        RaisedButton(
+                                                                          child: Text(
+                                                                            'Action1'
+                                                                          ),
+                                                                          onPressed: () {
+                                                                            
+                                                                          }
+                                                                        ),
+                                                                        Container(width: 10,),
+                                                                        RaisedButton(
+                                                                          child: Text(
+                                                                            'Action2'
+                                                                          ),
+                                                                          onPressed: () {
+                                                                            
+                                                                          }
+                                                                        ),
+                                                                      ],
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        )
+                                                      ],
+                                                    );
+                                                  }
+                                                );
                                               },
                                             ),
                                           ),
@@ -234,7 +436,108 @@ class _MyDesktopPageState extends State<Desktop> {
                                               padding: EdgeInsets.all(0),
                                               child: Icon(Icons.wifi, color: Colors.white.withOpacity(0.8)),
                                               onPressed: () {
-
+                                                showDialog(
+                                                  barrierColor: Colors.transparent,
+                                                  context: context,
+                                                  builder: (context) {
+                                                    return Stack(
+                                                      alignment: Alignment.topRight,
+                                                      children: <Widget>[
+                                                        Padding(
+                                                          padding: const EdgeInsets.only(left: 0, top: 30, bottom: 0, right: 0,),
+                                                          child: Container(
+                                                            decoration: BoxDecoration(
+                                                              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10),),
+                                                              color: Colors.black45.withOpacity(0.7),
+                                                              boxShadow: [
+                                                                BoxShadow(offset: Offset(0, 1), color: Colors.white30, spreadRadius: 1,)
+                                                              ]
+                                                            ),
+                                                            alignment: Alignment.topRight,
+                                                            height: 500,
+                                                            width: 300,
+                                                            child: Container(
+                                                              child: Column(
+                                                                children: [
+                                                                  Container( // Header I
+                                                                    height: 40,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(top: 10,),
+                                                                    child: Text(
+                                                                      'Wifi',
+                                                                      textAlign: TextAlign.left,
+                                                                      style: TextStyle(
+                                                                        color: Colors.white,
+                                                                        fontSize: 25,
+                                                                        decoration: TextDecoration.none,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Container( // Header II
+                                                                    height: 23,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(top: 10,),
+                                                                    child: Text(
+                                                                      'Connect the device to the internet.',
+                                                                      textAlign: TextAlign.left,
+                                                                      style: TextStyle(
+                                                                        color: Colors.white.withOpacity(0.7),
+                                                                        fontSize: 14,
+                                                                        decoration: TextDecoration.none,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Container( // Body
+                                                                    height: 360,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(top: 10, right: 35,),
+                                                                    // color: Colors.green,
+                                                                    child: Text(
+                                                                      'Dialog content coming soon',
+                                                                      textAlign: TextAlign.right,
+                                                                      style: TextStyle(
+                                                                        color: Colors.white,
+                                                                        fontSize: 14,
+                                                                        decoration: TextDecoration.none,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Container( // Actions
+                                                                    height: 50,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(right: 35,),
+                                                                    
+                                                                    child: Row(
+                                                                      children: [
+                                                                        RaisedButton(
+                                                                          child: Text(
+                                                                            'Action1'
+                                                                          ),
+                                                                          onPressed: () {
+                                                                            
+                                                                          }
+                                                                        ),
+                                                                        Container(width: 10,),
+                                                                        RaisedButton(
+                                                                          child: Text(
+                                                                            'Action2'
+                                                                          ),
+                                                                          onPressed: () {
+                                                                            
+                                                                          }
+                                                                        ),
+                                                                      ],
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        )
+                                                      ],
+                                                    );
+                                                  }
+                                                );
                                               },
                                             ),
                                           ),
@@ -245,7 +548,108 @@ class _MyDesktopPageState extends State<Desktop> {
                                               padding: EdgeInsets.all(0),
                                               child: Icon(Icons.volume_up, color: Colors.white.withOpacity(0.8)),
                                               onPressed: () {
-
+                                                showDialog(
+                                                  barrierColor: Colors.transparent,
+                                                  context: context,
+                                                  builder: (context) {
+                                                    return Stack(
+                                                      alignment: Alignment.topRight,
+                                                      children: <Widget>[
+                                                        Padding(
+                                                          padding: const EdgeInsets.only(left: 0, top: 30, bottom: 0, right: 0,),
+                                                          child: Container(
+                                                            decoration: BoxDecoration(
+                                                              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10),),
+                                                              color: Colors.black45.withOpacity(0.7),
+                                                              boxShadow: [
+                                                                BoxShadow(offset: Offset(0, 1), color: Colors.white30, spreadRadius: 1,)
+                                                              ]
+                                                            ),
+                                                            alignment: Alignment.topRight,
+                                                            height: 500,
+                                                            width: 300,
+                                                            child: Container(
+                                                              child: Column(
+                                                                children: [
+                                                                  Container( // Header I
+                                                                    height: 40,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(top: 10,),
+                                                                    child: Text(
+                                                                      'Sounds',
+                                                                      textAlign: TextAlign.left,
+                                                                      style: TextStyle(
+                                                                        color: Colors.white,
+                                                                        fontSize: 25,
+                                                                        decoration: TextDecoration.none,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Container( // Header II
+                                                                    height: 23,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(top: 10,),
+                                                                    child: Text(
+                                                                      'Change your volume or the device.',
+                                                                      textAlign: TextAlign.left,
+                                                                      style: TextStyle(
+                                                                        color: Colors.white.withOpacity(0.7),
+                                                                        fontSize: 14,
+                                                                        decoration: TextDecoration.none,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Container( // Body
+                                                                    height: 360,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(top: 10, right: 35,),
+                                                                    // color: Colors.green,
+                                                                    child: Text(
+                                                                      'Dialog content coming soon',
+                                                                      textAlign: TextAlign.right,
+                                                                      style: TextStyle(
+                                                                        color: Colors.white,
+                                                                        fontSize: 14,
+                                                                        decoration: TextDecoration.none,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Container( // Actions
+                                                                    height: 50,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(right: 35,),
+                                                                    
+                                                                    child: Row(
+                                                                      children: [
+                                                                        RaisedButton(
+                                                                          child: Text(
+                                                                            'Action1'
+                                                                          ),
+                                                                          onPressed: () {
+                                                                            
+                                                                          }
+                                                                        ),
+                                                                        Container(width: 10,),
+                                                                        RaisedButton(
+                                                                          child: Text(
+                                                                            'Action2'
+                                                                          ),
+                                                                          onPressed: () {
+                                                                            
+                                                                          }
+                                                                        ),
+                                                                      ],
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        )
+                                                      ],
+                                                    );
+                                                  }
+                                                );
                                               },
                                             ),
                                           ),
@@ -256,7 +660,108 @@ class _MyDesktopPageState extends State<Desktop> {
                                               padding: EdgeInsets.all(0),
                                               child: Icon(Icons.battery_unknown, color: Colors.white.withOpacity(0.8)),
                                               onPressed: () {
-
+                                                showDialog(
+                                                  barrierColor: Colors.transparent,
+                                                  context: context,
+                                                  builder: (context) {
+                                                    return Stack(
+                                                      alignment: Alignment.topRight,
+                                                      children: <Widget>[
+                                                        Padding(
+                                                          padding: const EdgeInsets.only(left: 0, top: 30, bottom: 0, right: 0,),
+                                                          child: Container(
+                                                            decoration: BoxDecoration(
+                                                              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10),),
+                                                              color: Colors.black45.withOpacity(0.7),
+                                                              boxShadow: [
+                                                                BoxShadow(offset: Offset(0, 1), color: Colors.white30, spreadRadius: 1,)
+                                                              ]
+                                                            ),
+                                                            alignment: Alignment.topRight,
+                                                            height: 500,
+                                                            width: 300,
+                                                            child: Container(
+                                                              child: Column(
+                                                                children: [
+                                                                  Container( // Header I
+                                                                    height: 40,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(top: 10,),
+                                                                    child: Text(
+                                                                      'Battery',
+                                                                      textAlign: TextAlign.left,
+                                                                      style: TextStyle(
+                                                                        color: Colors.white,
+                                                                        fontSize: 25,
+                                                                        decoration: TextDecoration.none,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Container( // Header II
+                                                                    height: 23,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(top: 10,),
+                                                                    child: Text(
+                                                                      'Status: unknown',
+                                                                      textAlign: TextAlign.left,
+                                                                      style: TextStyle(
+                                                                        color: Colors.white.withOpacity(0.7),
+                                                                        fontSize: 14,
+                                                                        decoration: TextDecoration.none,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Container( // Body
+                                                                    height: 360,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(top: 10, right: 35,),
+                                                                    // color: Colors.green,
+                                                                    child: Text(
+                                                                      'Dialog content coming soon',
+                                                                      textAlign: TextAlign.right,
+                                                                      style: TextStyle(
+                                                                        color: Colors.white,
+                                                                        fontSize: 14,
+                                                                        decoration: TextDecoration.none,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Container( // Actions
+                                                                    height: 50,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(right: 35,),
+                                                                    
+                                                                    child: Row(
+                                                                      children: [
+                                                                        RaisedButton(
+                                                                          child: Text(
+                                                                            'Action1'
+                                                                          ),
+                                                                          onPressed: () {
+                                                                            
+                                                                          }
+                                                                        ),
+                                                                        Container(width: 10,),
+                                                                        RaisedButton(
+                                                                          child: Text(
+                                                                            'Action2'
+                                                                          ),
+                                                                          onPressed: () {
+                                                                            
+                                                                          }
+                                                                        ),
+                                                                      ],
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        )
+                                                      ],
+                                                    );
+                                                  }
+                                                );
                                               },
                                             ),
                                           ),
@@ -267,7 +772,108 @@ class _MyDesktopPageState extends State<Desktop> {
                                               padding: EdgeInsets.all(0),
                                               child: Icon(Icons.keyboard, color: Colors.white.withOpacity(0.8)),
                                               onPressed: () {
-
+                                                showDialog(
+                                                  barrierColor: Colors.transparent,
+                                                  context: context,
+                                                  builder: (context) {
+                                                    return Stack(
+                                                      alignment: Alignment.topRight,
+                                                      children: <Widget>[
+                                                        Padding(
+                                                          padding: const EdgeInsets.only(left: 0, top: 30, bottom: 0, right: 0,),
+                                                          child: Container(
+                                                            decoration: BoxDecoration(
+                                                              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10),),
+                                                              color: Colors.black45.withOpacity(0.7),
+                                                              boxShadow: [
+                                                                BoxShadow(offset: Offset(0, 1), color: Colors.white30, spreadRadius: 1,)
+                                                              ]
+                                                            ),
+                                                            alignment: Alignment.topRight,
+                                                            height: 500,
+                                                            width: 300,
+                                                            child: Container(
+                                                              child: Column(
+                                                                children: [
+                                                                  Container( // Header I
+                                                                    height: 40,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(top: 10,),
+                                                                    child: Text(
+                                                                      'Keyboard layout',
+                                                                      textAlign: TextAlign.left,
+                                                                      style: TextStyle(
+                                                                        color: Colors.white,
+                                                                        fontSize: 25,
+                                                                        decoration: TextDecoration.none,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Container( // Header II
+                                                                    height: 23,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(top: 10,),
+                                                                    child: Text(
+                                                                      'Select your keyboard layout, go to settings for more.',
+                                                                      textAlign: TextAlign.left,
+                                                                      style: TextStyle(
+                                                                        color: Colors.white.withOpacity(0.7),
+                                                                        fontSize: 14,
+                                                                        decoration: TextDecoration.none,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Container( // Body
+                                                                    height: 360,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(top: 10, right: 35,),
+                                                                    // color: Colors.green,
+                                                                    child: Text(
+                                                                      'Dialog content coming soon',
+                                                                      textAlign: TextAlign.right,
+                                                                      style: TextStyle(
+                                                                        color: Colors.white,
+                                                                        fontSize: 14,
+                                                                        decoration: TextDecoration.none,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Container( // Actions
+                                                                    height: 50,
+                                                                    width: 270,
+                                                                    padding: EdgeInsets.only(right: 35,),
+                                                                    
+                                                                    child: Row(
+                                                                      children: [
+                                                                        RaisedButton(
+                                                                          child: Text(
+                                                                            'Action1'
+                                                                          ),
+                                                                          onPressed: () {
+                                                                            
+                                                                          }
+                                                                        ),
+                                                                        Container(width: 10,),
+                                                                        RaisedButton(
+                                                                          child: Text(
+                                                                            'Action2'
+                                                                          ),
+                                                                          onPressed: () {
+                                                                            
+                                                                          }
+                                                                        ),
+                                                                      ],
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        )
+                                                      ],
+                                                    );
+                                                  }
+                                                );
                                               },
                                             ),
                                           ),
@@ -339,9 +945,9 @@ class _MyDesktopPageState extends State<Desktop> {
                                                                     height: 360,
                                                                     width: 270,
                                                                     padding: EdgeInsets.only(top: 10, right: 35,),
-                                                                    color: Colors.green,
+                                                                    // color: Colors.green,
                                                                     child: Text(
-                                                                      'Content coming soon!',
+                                                                      'Dialog content coming soon',
                                                                       textAlign: TextAlign.right,
                                                                       style: TextStyle(
                                                                         color: Colors.white,
@@ -360,6 +966,15 @@ class _MyDesktopPageState extends State<Desktop> {
                                                                         RaisedButton(
                                                                           child: Text(
                                                                             'Action1'
+                                                                          ),
+                                                                          onPressed: () {
+                                                                            
+                                                                          }
+                                                                        ),
+                                                                        Container(width: 10,),
+                                                                        RaisedButton(
+                                                                          child: Text(
+                                                                            'Action2'
                                                                           ),
                                                                           onPressed: () {
                                                                             

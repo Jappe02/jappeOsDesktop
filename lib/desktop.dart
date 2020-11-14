@@ -1,3 +1,4 @@
+import 'dart:html';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'dart:async';
@@ -814,7 +815,7 @@ class _MyDesktopPageState extends State<Desktop> {
                                                                     width: 270,
                                                                     padding: EdgeInsets.only(top: 10,),
                                                                     child: Text(
-                                                                      'Select your keyboard layout, go to settings for more.',
+                                                                      'Select your keyboard layout.',
                                                                       textAlign: TextAlign.left,
                                                                       style: TextStyle(
                                                                         color: Colors.white.withOpacity(0.7),
@@ -828,13 +829,14 @@ class _MyDesktopPageState extends State<Desktop> {
                                                                     width: 270,
                                                                     padding: EdgeInsets.only(top: 10, right: 35,),
                                                                     // color: Colors.green,
-                                                                    child: Text(
-                                                                      'Dialog content coming soon',
-                                                                      textAlign: TextAlign.right,
-                                                                      style: TextStyle(
-                                                                        color: Colors.white,
-                                                                        fontSize: 14,
-                                                                        decoration: TextDecoration.none,
+                                                                    child: Drawer(
+                                                                      child: ListView(
+                                                                        children: <Widget>[
+                                                                          ListTile(
+                                                                            leading: Icon(Icons.keyboard, color: Colors.white54,),
+                                                                            title: Text('Item'),
+                                                                          ),
+                                                                        ],
                                                                       ),
                                                                     ),
                                                                   ),
@@ -847,20 +849,38 @@ class _MyDesktopPageState extends State<Desktop> {
                                                                       children: [
                                                                         RaisedButton(
                                                                           child: Text(
-                                                                            'Action1'
+                                                                            'More'
                                                                           ),
                                                                           onPressed: () {
                                                                             
                                                                           }
                                                                         ),
                                                                         Container(width: 10,),
-                                                                        RaisedButton(
-                                                                          child: Text(
-                                                                            'Action2'
-                                                                          ),
-                                                                          onPressed: () {
+                                                                        Container(
+                                                                          width: 35,
+                                                                          child: RaisedButton(
+                                                                            padding: EdgeInsets.all(0),
+                                                                            child: Icon(
+                                                                              Icons.add
+                                                                            ),
+                                                                            color: Colors.blue,
+                                                                            onPressed: () {
                                                                             
-                                                                          }
+                                                                            }
+                                                                          ),
+                                                                        ),
+                                                                        Container(
+                                                                          width: 35,
+                                                                          child: RaisedButton(
+                                                                            padding: EdgeInsets.all(0),
+                                                                            child: Icon(
+                                                                              Icons.remove
+                                                                            ),
+                                                                            color: Colors.red,
+                                                                            onPressed: () {
+                                                                            
+                                                                            }
+                                                                          ),
                                                                         ),
                                                                       ],
                                                                     ),

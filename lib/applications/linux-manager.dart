@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simpaDesktop/components/system.dart';
+import 'package:simpa_desktop/components/system.dart';
 import 'dart:io';
 
 void main() {

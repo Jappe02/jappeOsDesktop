@@ -19,3 +19,6 @@ const sstmSystemDsktpBlurColor = Color(0xFF000000); /// Default available blur c
 
 // desktop wallpaper
 const String dsktpWallpaper = "lib/images/desktop/backgrounds/wallpaper2.jpg";
+
+// primary/selected-color
+const sstmDsktpPrimaryColor = Color(0xFF2196F3); /// Default: 0xFF2196F3

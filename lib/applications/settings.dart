@@ -1,5 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:simpa_desktop/components/system.dart';
+import 'package:simpa_desktop/components/consts.dart';
 
 void main() {
   runApp(MyApp());
@@ -39,6 +40,7 @@ class _WiFiPageState extends State<WiFiPage> {
 
     // WidgetsBinding.instance.addPostFrameCallback((_) => _scaffoldKey.currentState.showSnackBar(SnackBar(content: Text('An important JappeOS update is required, please install it as soon as possible!'), action: SnackBarAction(label: 'Install now!', onPressed: () {},), backgroundColor: Colors.red, duration: const Duration(minutes: 5),),),);
     WidgetsBinding.instance.addPostFrameCallback(
+      // ignore: deprecated_member_use
       (_) => _scaffoldKey.currentState.showSnackBar(
         SnackBar(
           content: Text(
@@ -73,7 +75,7 @@ class _WiFiPageState extends State<WiFiPage> {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        title: Text(widget.title + ' > Wi-Fi'),
+        title: Text('Settings > WiFi'),
         actions: <Widget>[
           Container(
             width: 400,
@@ -103,7 +105,7 @@ class _WiFiPageState extends State<WiFiPage> {
                   child: Container(
                     padding: EdgeInsets.only(bottom: 2.5,),
                     child: TextField(
-                      cursorColor: sstmDsktpPrimaryColor,
+                      cursorColor: dsktpDesktopPrimaryColor,
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         focusedBorder: InputBorder.none,
@@ -135,14 +137,14 @@ class _WiFiPageState extends State<WiFiPage> {
                 child: ListView(
               children: [
                 ListTile(
-                  tileColor: sstmDsktpPrimaryColor,
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  tileColor: dsktpDesktopPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.wifi),
                   title: Text('Wi-Fi'),
                   onTap: () {},
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.bluetooth),
                   title: Text('Bluetooth'),
                   onTap: () {
@@ -150,7 +152,7 @@ class _WiFiPageState extends State<WiFiPage> {
                   },
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.edit),
                   title: Text('Appearance'),
                   onTap: () {
@@ -158,13 +160,13 @@ class _WiFiPageState extends State<WiFiPage> {
                   },
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.notifications),
                   title: Text('Notifications'),
                   onTap: () {},
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.system_update),
                   title: Text('Updates'),
                   onTap: () {
@@ -172,37 +174,37 @@ class _WiFiPageState extends State<WiFiPage> {
                   },
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.language),
                   title: Text('Region & Language'),
                   onTap: () {},
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.account_circle),
                   title: Text('Accounts'),
                   onTap: () {},
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.security),
                   title: Text('Security'),
                   onTap: () {},
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.speaker),
                   title: Text('Sound'),
                   onTap: () {},
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.power_settings_new),
                   title: Text('Power'),
                   onTap: () {},
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.info),
                   title: Text('About'),
                   onTap: () {},
@@ -226,7 +228,7 @@ class BluetoothPage extends StatefulWidget {
   _BluetoothPageState createState() => _BluetoothPageState();
 }
 
-class _BluetoothPageState extends State<WiFiPage> {
+class _BluetoothPageState extends State<BluetoothPage> {
   var _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -235,6 +237,7 @@ class _BluetoothPageState extends State<WiFiPage> {
 
     // WidgetsBinding.instance.addPostFrameCallback((_) => _scaffoldKey.currentState.showSnackBar(SnackBar(content: Text('An important JappeOS update is required, please install it as soon as possible!'), action: SnackBarAction(label: 'Install now!', onPressed: () {},), backgroundColor: Colors.red, duration: const Duration(minutes: 5),),),);
     WidgetsBinding.instance.addPostFrameCallback(
+      // ignore: deprecated_member_use
       (_) => _scaffoldKey.currentState.showSnackBar(
         SnackBar(
           content: Text(
@@ -269,7 +272,7 @@ class _BluetoothPageState extends State<WiFiPage> {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        title: Text(widget.title + ' > Bluetooth'),
+        title: Text('Settings > Bluetooth'),
         actions: <Widget>[
           Container(
             width: 400,
@@ -299,7 +302,7 @@ class _BluetoothPageState extends State<WiFiPage> {
                   child: Container(
                     padding: EdgeInsets.only(bottom: 2.5,),
                     child: TextField(
-                      cursorColor: sstmDsktpPrimaryColor,
+                      cursorColor: dsktpDesktopPrimaryColor,
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         focusedBorder: InputBorder.none,
@@ -331,7 +334,7 @@ class _BluetoothPageState extends State<WiFiPage> {
                 child: ListView(
               children: [
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.wifi),
                   title: Text('Wi-Fi'),
                   onTap: () {
@@ -339,14 +342,14 @@ class _BluetoothPageState extends State<WiFiPage> {
                   },
                 ),
                 ListTile(
-                  tileColor: sstmDsktpPrimaryColor,
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  tileColor: dsktpDesktopPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.bluetooth),
                   title: Text('Bluetooth'),
                   onTap: () {},
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.edit),
                   title: Text('Appearance'),
                   onTap: () {
@@ -354,13 +357,13 @@ class _BluetoothPageState extends State<WiFiPage> {
                   },
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.notifications),
                   title: Text('Notifications'),
                   onTap: () {},
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.system_update),
                   title: Text('Updates'),
                   onTap: () {
@@ -368,37 +371,37 @@ class _BluetoothPageState extends State<WiFiPage> {
                   },
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.language),
                   title: Text('Region & Language'),
                   onTap: () {},
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.account_circle),
                   title: Text('Accounts'),
                   onTap: () {},
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.security),
                   title: Text('Security'),
                   onTap: () {},
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.speaker),
                   title: Text('Sound'),
                   onTap: () {},
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.power_settings_new),
                   title: Text('Power'),
                   onTap: () {},
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.info),
                   title: Text('About'),
                   onTap: () {},
@@ -422,7 +425,7 @@ class AppearancePage extends StatefulWidget {
   _AppearancePageState createState() => _AppearancePageState();
 }
 
-class _AppearancePageState extends State<WiFiPage> {
+class _AppearancePageState extends State<AppearancePage> {
   var _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -431,6 +434,7 @@ class _AppearancePageState extends State<WiFiPage> {
 
     // WidgetsBinding.instance.addPostFrameCallback((_) => _scaffoldKey.currentState.showSnackBar(SnackBar(content: Text('An important JappeOS update is required, please install it as soon as possible!'), action: SnackBarAction(label: 'Install now!', onPressed: () {},), backgroundColor: Colors.red, duration: const Duration(minutes: 5),),),);
     WidgetsBinding.instance.addPostFrameCallback(
+      // ignore: deprecated_member_use
       (_) => _scaffoldKey.currentState.showSnackBar(
         SnackBar(
           content: Text(
@@ -465,7 +469,7 @@ class _AppearancePageState extends State<WiFiPage> {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        title: Text(widget.title + ' > Appearance'),
+        title: Text('Settings > Appearance'),
         actions: <Widget>[
           Container(
             width: 400,
@@ -495,7 +499,7 @@ class _AppearancePageState extends State<WiFiPage> {
                   child: Container(
                     padding: EdgeInsets.only(bottom: 2.5,),
                     child: TextField(
-                      cursorColor: sstmDsktpPrimaryColor,
+                      cursorColor: dsktpDesktopPrimaryColor,
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         focusedBorder: InputBorder.none,
@@ -527,7 +531,7 @@ class _AppearancePageState extends State<WiFiPage> {
                 child: ListView(
               children: [
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.wifi),
                   title: Text('Wi-Fi'),
                   onTap: () {
@@ -535,7 +539,7 @@ class _AppearancePageState extends State<WiFiPage> {
                   },
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.bluetooth),
                   title: Text('Bluetooth'),
                   onTap: () {
@@ -543,20 +547,20 @@ class _AppearancePageState extends State<WiFiPage> {
                   },
                 ),
                 ListTile(
-                  tileColor: sstmDsktpPrimaryColor,
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  tileColor: dsktpDesktopPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.edit),
                   title: Text('Appearance'),
                   onTap: () {},
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.notifications),
                   title: Text('Notifications'),
                   onTap: () {},
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.system_update),
                   title: Text('Updates'),
                   onTap: () {
@@ -564,37 +568,37 @@ class _AppearancePageState extends State<WiFiPage> {
                   },
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.language),
                   title: Text('Region & Language'),
                   onTap: () {},
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.account_circle),
                   title: Text('Accounts'),
                   onTap: () {},
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.security),
                   title: Text('Security'),
                   onTap: () {},
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.speaker),
                   title: Text('Sound'),
                   onTap: () {},
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.power_settings_new),
                   title: Text('Power'),
                   onTap: () {},
                 ),
                 ListTile(
-                  selectedTileColor: sstmDsktpPrimaryColor,
+                  selectedTileColor: dsktpDesktopPrimaryColor,
                   leading: Icon(Icons.info),
                   title: Text('About'),
                   onTap: () {},
@@ -602,6 +606,97 @@ class _AppearancePageState extends State<WiFiPage> {
               ],
             )),
           ),
+          Positioned(
+            left: 298,
+            top: 0,
+            bottom: 0,
+            right: 0,
+            child: Stack(
+              children: [
+                Positioned( // content
+                  bottom: 0,
+                  left: 2,
+                  top: 0,
+                  right: 0,
+                  child: Container(
+                    color: Colors.white,
+                    child: ListView( 
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.all(20.0),
+                          height: 500,
+                          //color: Colors.blue,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                height: 35,
+                                child: Text(
+                                  'SettingsTile',
+                                  style: TextStyle(fontSize: 25,)
+                                ),
+                              ),
+                              Container(height: 20,),
+                              Positioned(
+                                height: 20,
+                                left: 0,
+                                right: 0,
+                                child: Stack(
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Icon(Icons.settings, color: Colors.grey),
+                                        Container(width: 20,),
+                                        Text(
+                                          'SettingsItem',
+                                          style: TextStyle(fontSize: 15,)
+                                        ),
+                                      ],
+                                    ),
+                                    Positioned(
+                                      height: 20,
+                                      right: 0,
+                                      child: Switch(
+                                        value: true,
+                                        onChanged: (value) {
+                                          setState(() {
+                                            print('SWITCH USED');
+                                          });
+                                        },
+                                      ),
+                                    ),
+                                    Positioned(
+                                      height: 20,
+                                      right: 150,
+                                      child: Text(
+                                        'ON/OFF [bool]',
+                                        textDirection: TextDirection.rtl,
+                                        style: TextStyle(fontSize: 15,)
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Positioned( // separator
+                  bottom: 0,
+                  left: 0,
+                  top: 0,
+                  width: 2,
+                  child: Container(
+                    color: Colors.black12,
+                  ),
+                ),
+              ],
+            )
+            
+          )
         ],
       ),
     );

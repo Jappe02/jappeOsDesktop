@@ -10,7 +10,7 @@ class SimpaDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Desktop',
-      home: desktop(title: ''),
+      home: Desktop(title: ''),
       theme: ThemeData(
 
         primarySwatch: Colors.teal,
@@ -21,8 +21,8 @@ class SimpaDesktop extends StatelessWidget {
   }
 }
 
-class desktop extends StatefulWidget {
-  desktop({Key key, this.title}) : super(key: key);
+class Desktop extends StatefulWidget {
+  Desktop({Key key, this.title}) : super(key: key);
 
   final String title;
 
@@ -30,7 +30,7 @@ class desktop extends StatefulWidget {
   _MyDesktopPageState createState() => _MyDesktopPageState();
 }
 
-class _MyDesktopPageState extends State<desktop> {
+class _MyDesktopPageState extends State<Desktop> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

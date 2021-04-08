@@ -1,9 +1,7 @@
 // import 'dart:html';
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'dart:async';
-import 'dart:io';
-import 'package:simpa_desktop/components/system.dart';
+import 'package:simpa_desktop/components/consts.dart';
 
 void main() {
   runApp(SimpaDesktop());
@@ -1050,7 +1048,7 @@ class _MyDesktopPageState extends State<Desktop> {
             .of(context)
             .size
             .width / 1.2,
-          color: sstmSystemDsktpBlurColor.withOpacity(0.5),
+          color: dsktpDesktopDsktpBlurColor.withOpacity(0.5),
           child: child,
         ),
       ),
@@ -1436,7 +1434,7 @@ class _MyLauncherPageState extends State<Launcher> {
             .of(context)
             .size
             .width / 1.2,
-          color: sstmSystemDsktpBlurColor.withOpacity(0.5),
+          color: dsktpDesktopDsktpBlurColor.withOpacity(0.5),
           child: child,
         ),
       ),
@@ -1630,7 +1628,7 @@ class _MyNotificationsPageState extends State<Notifications> {
             .of(context)
             .size
             .width / 1.2,
-          color: sstmSystemDsktpBlurColor.withOpacity(0.5),
+          color: dsktpDesktopDsktpBlurColor.withOpacity(0.5),
           child: child,
         ),
       ),

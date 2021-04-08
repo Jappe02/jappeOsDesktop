@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:simpa_desktop/applications/app-center/screens/home.dart';
-import 'package:simpa_desktop/components/system.dart';
-import 'dart:io';
 
 void main() {
   runApp(AppCenter());

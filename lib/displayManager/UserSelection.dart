@@ -191,6 +191,7 @@ class _MyLoginPageState extends State<LoginPage> {
                             decoration: const InputDecoration(
                               labelText: 'Password',
                             ),
+                            // ignore: missing_return
                             validator: (String value) {
                               if (value.trim().isEmpty) {
                                 return 'Password is required';

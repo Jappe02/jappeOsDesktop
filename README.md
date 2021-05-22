@@ -34,11 +34,6 @@ jappe-os, in the future when it comes!
 ### - HotBoySummer (discord)
 ### - MannersTheCyberpunker8000 (discord)
 
-# Kernel
-
-Jappe-os uses the linux kernel, if you are not pleased to use it, you can always
-suggest in the discord
-
 # LINKS
 
 - [Discord](https://discord.gg/dRtU4HR)

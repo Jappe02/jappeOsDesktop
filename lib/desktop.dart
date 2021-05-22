@@ -163,10 +163,10 @@ class _MyDesktopPageState extends State<Desktop> {
                             ),
                           ),
                           Positioned( // Top bar
-                            top: -5,
+                            top: 0,
                             left: 0,
                             right: 0,
-                            height: 35,
+                            height: 30,
                             
                             child: Container(
                               child: topBarContainer(
@@ -1048,7 +1048,7 @@ class _MyDesktopPageState extends State<Desktop> {
             .of(context)
             .size
             .width / 1.2,
-          color: dsktpDesktopDsktpBlurColor.withOpacity(0.5),
+          color: dsktpBlurKey,
           child: child,
         ),
       ),
@@ -1614,7 +1614,7 @@ class _MyNotificationsPageState extends State<Notifications> {
       ),
     );
   }
-  // Blur effects
+  // Blur effects (NOTE: not for topbar)
   Widget topBarContainer (Widget child) {
     return ClipRRect (
       child: BackdropFilter(
@@ -1628,7 +1628,7 @@ class _MyNotificationsPageState extends State<Notifications> {
             .of(context)
             .size
             .width / 1.2,
-          color: dsktpDesktopDsktpBlurColor.withOpacity(0.5),
+          color: dsktpBlurKey,
           child: child,
         ),
       ),

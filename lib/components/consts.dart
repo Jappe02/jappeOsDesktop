@@ -21,3 +21,6 @@ const String dsktpWallpaper = "lib/images/desktop/backgrounds/wallpaper2.jpg";
 
 // primary/selected-color
 const dsktpDesktopPrimaryColor = Color(0xFF2196F3); /// Default: 0xFF2196F3
+
+// blurred color key
+const dsktpBlurKey = Color(0xFFff00ff); /// Default: 0xFF2196F3

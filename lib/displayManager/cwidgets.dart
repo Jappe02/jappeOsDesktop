@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 
+// DESKTOP DIALOG
+
 class Dialog extends StatefulWidget {
   final Widget child;
 
@@ -51,5 +53,29 @@ class _DialogState extends State<Dialog> {
         ],
       )
     ]);
+  }
+}
+
+// JAPPEOS APP SIDEBAR BUTTON
+
+class SettingsSidebar extends StatefulWidget {
+  final Widget child;
+
+  SettingsSidebar({Key key, @required this.child}) : super(key: key);
+
+  _SettingsSidebarState createState() => _SettingsSidebarState();
+}
+
+class _SettingsSidebarState extends State<SettingsSidebar> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 45,
+      width: 300,
+      child: FlatButton(
+        child: widget.child,
+        onPressed: () {},
+      ),
+    );
   }
 }

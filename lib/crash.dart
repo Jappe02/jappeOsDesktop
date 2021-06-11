@@ -1,3 +1,6 @@
+
+/// [NOTE: This crash window will move to the JappeOS gtk app!]
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +17,7 @@ class Crash extends StatelessWidget {
         primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyCrashPage(title: 'SHELL_CRASH'),
+      home: MyCrashPage(title: 'Jappe os crash: ERROR_CODE'),
     );
   }
 }
@@ -42,7 +45,7 @@ class _MyCrashPageState extends State<MyCrashPage> {
           child: Column(
             children: <Widget>[
               Text(
-                'The jappe os shell has been crashed. More information below.\n\n\n\nIf this is the first time you see this, dont worry,\nif you see this screen showing up many times,\nplease contact us on: https://discord.gg/dRtU4HR,\nor: https://jappeos.blogspot.com/\n\n\n\n\nCrash: [application stopped with code: (0)]\n\n\nSHELL_UNEXPECTED_CLOSE\n\n\nHit [R] to restart...',
+                'The jappe os desktop has been crashed. More information below.\n\n\n\nIf this is the first time you see this, dont worry,\nif you see this screen showing up many times,\nplease contact us on: https://discord.gg/dRtU4HR.\n\n\n\n\nCrash: [application stopped with code: (0)]\n\n\nERROR_CODE\n\n\nHit [R] to restart...',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.red.withOpacity(1),

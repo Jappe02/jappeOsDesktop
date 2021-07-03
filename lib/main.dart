@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'desktop.dart';
 //import 'displayManager/josdm.dart';
+//import 'applications/settings.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Desktop(title: 'desktop'), // default: 'home: Desktop(title: 'desktop'),'
+      home: Desktop(title: 'JappeOS'), // default: 'home: Desktop(title: 'desktop'),'
     );
   }
 }

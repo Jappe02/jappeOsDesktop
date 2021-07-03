@@ -2,6 +2,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:simpa_desktop/components/consts.dart';
+import 'package:simpa_desktop/displayManager/cwidgets.dart';
 
 void main() {
   runApp(SimpaDesktop());
@@ -25,6 +26,8 @@ class SimpaDesktop extends StatelessWidget {
   }
 }
 
+
+// DESKTOP PAGE
 class Desktop extends StatefulWidget {
   Desktop({Key key, this.title}) : super(key: key);
 
@@ -33,7 +36,6 @@ class Desktop extends StatefulWidget {
   @override
   _MyDesktopPageState createState() => _MyDesktopPageState();
 }
-
 
 
 class _MyDesktopPageState extends State<Desktop> {
@@ -1079,6 +1081,7 @@ class _MyDesktopPageState extends State<Desktop> {
 }
 
 
+// LAUNCHER PAGE
 class Launcher extends StatefulWidget {
   Launcher({Key key, this.title}) : super(key: key);
 
@@ -1115,32 +1118,65 @@ class _MyLauncherPageState extends State<Launcher> {
                     children: <Widget>[
                       // Topbar left side
                       Positioned(
-                        top: 10,
-                        left: 15,
-                        child: Text(
-                          'Launcher',
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
+                        //top: 10,
+                        left: 0,
+                        child: Row(
+                          children: [
+                            IconButton(
+                              icon: Icon(Icons.apps, color: Colors.white,),
+                              tooltip: 'Escape',
+                              onPressed: () {
+                                Navigator.push(context,
+                                MaterialPageRoute(builder: (context)=>Desktop()));
+                              },
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(top: 2, /*left: 5, right: 5,*/),
+                              width: 2,
+                              height: 20,
+                              color: Colors.white38,
+                            ),
+                            IconButton(
+                              icon: Icon(Icons.edit, color: Colors.white,),
+                              tooltip: 'Edit',
+                              onPressed: () {
+
+                              },
+                            ),
+                          /*onPressed: () {
+                            Navigator.push(context,
+                            MaterialPageRoute(builder: (context)=>Desktop()));
+                          },*/
+                          ],
                         ),
                       ),
 
                       // Topbar right side
                       Positioned(
+                        //top: 10,
                         right: 0,
-                        child: FlatButton(
-                          padding: EdgeInsets.all(0),
-                          child: Text(
-                            'Close',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white.withOpacity(0.8),
+                        child: Row(
+                          children: [
+                            Container(
+                              height: 35,
+                              child: FlatButton(
+                                padding: EdgeInsets.all(0),
+                                child: Text(
+                                  '7.35PM',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                onPressed: ( () {}
+
+                                ),
+                              ),
                             ),
-                          ),
-                          onPressed: () {
+                          /*onPressed: () {
                             Navigator.push(context,
                             MaterialPageRoute(builder: (context)=>Desktop()));
-                          },
+                          },*/
+                          ],
                         ),
                       ),
                     ],
@@ -1156,71 +1192,233 @@ class _MyLauncherPageState extends State<Launcher> {
               right: 0,
               child: Container(
                 child: contentContainer(
-                  Column(
+                  Stack(
                     children: <Widget>[
+                      
                       Align(
                         alignment: Alignment.topCenter,
-                          
                         child: Container(
-                          width: 240,
-                          child: Row(
+                          padding: EdgeInsets.only(top: 40,),
+                          height: double.infinity,
+                          width: 675,
+                          //color: Colors.red,
+                          child: ListView(
                             children: [
-                              Column(
-                                children: [
-                                  FlatButton(
-                                    padding: EdgeInsets.all(0),
-                                    child: Row(
-                                      children: [
-                                        Icon(Icons.apps, color: Colors.blue[300],),
-                                        Text(
-                                          'App launcher',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.blue[300],
+                              Wrap(
+                            direction: Axis.horizontal,
+                            spacing: 15,
+                            runSpacing: 15,
+                            children: [
+
+
+                              LauncherItemButton(
+                                jicon: dsktpWallpaper,
+                                jtext: '76d212f4-c10c-4ba3-b571-84b50b203afe',
+                              ),
+
+
+                              Container(
+                                width: 100,
+                                height: 110,
+                                child: FlatButton(
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        width: 100,
+                                        height: 90,
+                                        padding: EdgeInsets.only(left: 5, right: 5,),
+                                        decoration: BoxDecoration(
+                                          image: DecorationImage(
+                                            image: AssetImage(dsktpWallpaper), // desktop background image
+                                            fit: BoxFit.cover,
                                           ),
                                         ),
-                                      ],
-                                    ),
-                                    onPressed: () {
-                                
-                                    },
-                          
-                                  ),
-                                  Container(
-                                    height: 3,
-                                    width: 120,
-                                    color: Colors.blue[300],
-                                  ),
-                                ],
-                              ),
-                              Container(width: 10, height: 10,),
-                              FlatButton(
-                                padding: EdgeInsets.all(0),
-                                child: Row(
-                                  children: [
-                                    Icon(Icons.notifications_active, color: Colors.white,),
-                                    Text(
-                                      'Notifications',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.white,
                                       ),
-                                    ),
-                                  ],
+                                      Container(
+                                        width: 100,
+                                        height: 20,
+                                        padding: EdgeInsets.only(left: 5, right: 5, bottom: 3,),
+                                        child: Text(
+                                          'ItemTitle',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            color: Colors.white70,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    //side: BorderSide(color: Colors.red)
+                                  ),
+                                  hoverColor: Colors.black.withOpacity(0.2),
+                                  onPressed: () {
+
+                                  },
                                 ),
-                                onPressed: () {
-                                  Navigator.push(context,
-                                  MaterialPageRoute(builder: (context)=>Notifications()));
-                                },
-                          
+                                
                               ),
+
+
+                              Container(
+                                width: 100,
+                                height: 110,
+                                child: FlatButton(
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        width: 100,
+                                        height: 90,
+                                        padding: EdgeInsets.only(left: 5, right: 5,),
+                                        child: Icon(Icons.settings, color: Colors.white, size: 50,),
+                                      ),
+                                      Container(
+                                        width: 100,
+                                        height: 20,
+                                        padding: EdgeInsets.only(left: 5, right: 5, bottom: 3,),
+                                        child: Text(
+                                          'ItemTitle',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            color: Colors.white70,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    //side: BorderSide(color: Colors.red)
+                                  ),
+                                  hoverColor: Colors.black.withOpacity(0.2),
+                                  onPressed: () {
+
+                                  },
+                                ),
+                                
+                              ),
+                              Container(
+                                width: 100,
+                                height: 110,
+                                child: FlatButton(
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        width: 100,
+                                        height: 90,
+                                        padding: EdgeInsets.only(left: 5, right: 5,),
+                                        child: Icon(Icons.settings, color: Colors.white, size: 50,),
+                                      ),
+                                      Container(
+                                        width: 100,
+                                        height: 20,
+                                        padding: EdgeInsets.only(left: 5, right: 5, bottom: 3,),
+                                        child: Text(
+                                          'ItemTitle',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            color: Colors.white70,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    //side: BorderSide(color: Colors.red)
+                                  ),
+                                  hoverColor: Colors.black.withOpacity(0.2),
+                                  onPressed: () {
+
+                                  },
+                                ),
+                                
+                              ),
+                              Container(
+                                width: 100,
+                                height: 110,
+                                child: FlatButton(
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        width: 100,
+                                        height: 90,
+                                        padding: EdgeInsets.only(left: 5, right: 5,),
+                                        child: Icon(Icons.settings, color: Colors.white, size: 50,),
+                                      ),
+                                      Container(
+                                        width: 100,
+                                        height: 20,
+                                        padding: EdgeInsets.only(left: 5, right: 5, bottom: 3,),
+                                        child: Text(
+                                          'ItemTitle',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            color: Colors.white70,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    //side: BorderSide(color: Colors.red)
+                                  ),
+                                  hoverColor: Colors.black.withOpacity(0.2),
+                                  onPressed: () {
+
+                                  },
+                                ),
+                                
+                              ),
+                              Container(
+                                width: 100,
+                                height: 110,
+                                child: FlatButton(
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        width: 100,
+                                        height: 90,
+                                        padding: EdgeInsets.only(left: 5, right: 5,),
+                                        child: Icon(Icons.settings, color: Colors.white, size: 50,),
+                                      ),
+                                      Container(
+                                        width: 100,
+                                        height: 20,
+                                        padding: EdgeInsets.only(left: 5, right: 5, bottom: 3,),
+                                        child: Text(
+                                          'ItemTitle',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            color: Colors.white70,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    //side: BorderSide(color: Colors.red)
+                                  ),
+                                  hoverColor: Colors.black.withOpacity(0.2),
+                                  onPressed: () {
+
+                                  },
+                                ),
+                                
+                              ),
+
+
                             ],
                           ),
-                          
+                            ],
+                          ),
                         ),
                       ),
 
-                      Align(
+                      /*Align(
                         alignment: Alignment.topCenter,
                           
                         child: Container( // action buttons
@@ -1409,7 +1607,7 @@ class _MyLauncherPageState extends State<Launcher> {
                           ),
                           
                         ),
-                      ),
+                      ),*/
                     ],
                   ),
                 ),
@@ -1424,7 +1622,7 @@ class _MyLauncherPageState extends State<Launcher> {
   Widget topBarContainer (Widget child) {
     return ClipRRect (
       child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
+        filter: ImageFilter.blur(sigmaX: 40.0, sigmaY: 40.0),
         child: Container(
           height: MediaQuery
             .of(context)
@@ -1434,7 +1632,7 @@ class _MyLauncherPageState extends State<Launcher> {
             .of(context)
             .size
             .width / 1.2,
-          color: dsktpDesktopDsktpBlurColor.withOpacity(0.5),
+          color: dsktpDesktopDsktpBlurColor.withOpacity(0.6),
           child: child,
         ),
       ),
@@ -1443,7 +1641,7 @@ class _MyLauncherPageState extends State<Launcher> {
   Widget contentContainer (Widget child) {
     return ClipRRect (
       child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 3.0, sigmaY: 3.0),
+        filter: ImageFilter.blur(sigmaX: 20.0, sigmaY: 20.0),
         child: Container(
           height: MediaQuery
             .of(context)
@@ -1453,7 +1651,7 @@ class _MyLauncherPageState extends State<Launcher> {
             .of(context)
             .size
             .width / 1.2,
-          color:Colors.black.withOpacity(0.2),
+          color:Colors.black.withOpacity(0.5),
           child: child,
         ),
       ),

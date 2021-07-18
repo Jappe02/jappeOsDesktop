@@ -2,7 +2,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:simpa_desktop/components/consts.dart';
-import 'package:simpa_desktop/displayManager/cwidgets.dart';
+import 'package:simpa_desktop/components/cwidgets.dart';
 
 void main() {
   runApp(SimpaDesktop());
@@ -1151,26 +1151,38 @@ class _MyLauncherPageState extends State<Launcher> {
                         ),
                       ),
 
+                      // Topbar center
+                      Center(
+                        child: Container(
+                          height: 35,
+                          width: 200,
+                          child: FlatButton(
+                            padding: EdgeInsets.all(0),
+                            child: Text(
+                              '7.35PM',
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                            onPressed: ( () {}
+
+                            ),
+                          ),
+                        ),
+                      ),
+
                       // Topbar right side
                       Positioned(
                         //top: 10,
                         right: 0,
                         child: Row(
                           children: [
-                            Container(
-                              height: 35,
-                              child: FlatButton(
-                                padding: EdgeInsets.all(0),
-                                child: Text(
-                                  '7.35PM',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                onPressed: ( () {}
+                            IconButton(
+                              icon: Icon(Icons.notifications, color: Colors.white,),
+                              tooltip: 'Notifications',
+                              onPressed: () {
 
-                                ),
-                              ),
+                              },
                             ),
                           /*onPressed: () {
                             Navigator.push(context,
@@ -1214,6 +1226,12 @@ class _MyLauncherPageState extends State<Launcher> {
                               LauncherItemButton(
                                 jicon: dsktpWallpaper,
                                 jtext: '76d212f4-c10c-4ba3-b571-84b50b203afe',
+                              ),
+
+
+                              SettingsSidebarButton(
+                                jicon: Icons.settings,
+                                jtext: 'Settings Sidebar Button',
                               ),
 
 

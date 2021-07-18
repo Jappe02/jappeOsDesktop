@@ -17,10 +17,12 @@ const dsktpDesktopColorTheme = Color(0xFFf5f6fa); /// Default available color th
 const dsktpDesktopDsktpBlurColor = Color(0xFF000000); /// Default available blur colors: light: 0xFFffffff; dark: 0xFF000000; // The dafault color is dark
 
 // desktop wallpaper
-const String dsktpWallpaper = "lib/images/desktop/backgrounds/wallpaper2.jpg"; // This should search the picture from a local folder in the future.
+const String dsktpWallpaper = "lib/images/desktop/backgrounds/wallpaper1.jpg"; // This should search the picture from a local folder in the future.
 
 // primary/selected-color
 const dsktpDesktopPrimaryColor = Color(0xFF2196F3); /// Default: 0xFF2196F3
 
 // blurred color key
 const dsktpBlurKey = Color(0xFFff00ff); /// Default: 0xFF2196F3
+
+// ----------------------------------------------------------------------------------

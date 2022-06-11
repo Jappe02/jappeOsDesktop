@@ -1,3 +1,5 @@
+# NOTE: THIS PROJECT HAS BEEN MOVED TO Jappe-OS/JappeOS
+
 # JappeOsDesktop
 
 Jappe os desktop is the desktop environment for Jappe os.
